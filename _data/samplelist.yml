@@ -1,11 +1,11 @@
 #docs_list_title: Navigation test
 docs:
 
-- title: Introduction
-  url: introduction.html
+- title: Teste 1
+  url: teste1.html
 
-- title: Configuration
-  url: configuration.html
+- title: Teste 2
+  url: teste2.html
 
-- title: Deployment
-  url: deployment.html
+- title: Teste 3
+  url: teste3.html
