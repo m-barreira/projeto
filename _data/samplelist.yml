@@ -1,11 +1,5 @@
 docs_list_title: Navigation test
 docs:
 
-- title: Teste 1
-  url: teste1.html
-
-- title: Teste 2
-  url: teste2.html
-
-- title: Teste 3
-  url: teste3.html
+- title: Dinastia
+  url: dinastia-menu.html

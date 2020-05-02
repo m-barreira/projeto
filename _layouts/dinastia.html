@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<header class="post-header">
+	<h1 class="post-title p-name" itemprop="name headline">{{ page.title }}</h1>
+</header>
+
+<div class="post-content e-content" itemprop="articleBody">
+	{{ content }}
+</div>
+
+<nav>
+	<ul>
+		{% for rei in site.dinastia %}
+		<li>
+			<a href="{{site.baseurl}}/dinastia/{{rei.slug}}">{{rei.title}}</a>
+			<p>{{rei.category}}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>

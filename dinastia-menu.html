@@ -1,0 +1,15 @@
+---
+title: Dinastia Afonsina
+layout: page
+---
+
+<nav>
+	<ul>
+		{% for rei in site.dinastia %}
+		<li>
+			<a href="{{site.baseurl}}/dinastia/{{rei.slug}}">{{rei.title}}</a>
+			<p>{{rei.category}}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>
