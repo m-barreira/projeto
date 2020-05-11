@@ -1,0 +1,15 @@
+---
+title: Formação
+layout: page
+---
+
+<div>
+	<ul>
+		{% for school in site.data.school.docs %}
+		<li>
+			<a href="{{site.baseurl}}/{{school.slug}}">{{school.title}}</a>
+			<p>{{school.category}}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

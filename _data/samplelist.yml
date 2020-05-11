@@ -1,5 +1,11 @@
-docs_list_title: Navigation test
+docs_list_title: Navigation
 docs:
 
-- title: Dinastia
-  url: dinastia-menu.html
+- title: Sobre
+  url: about-menu.html
+
+- title: Portfolio
+  url: portfolio-menu.html
+
+- title: Formação
+  url: school-menu.html

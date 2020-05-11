@@ -1,0 +1,17 @@
+---
+title: Portfolio
+layout: page
+---
+
+<div>
+	<ul>
+		{% for project in site.data.portfolio.docs %}
+		<li>
+			<a href="{{project.link}}">{{project.title}}</a>
+			<img src="{{project.image}}">
+			<p>{{project.date}}</p>
+			<p>{{project.description }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

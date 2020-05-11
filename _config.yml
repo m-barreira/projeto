@@ -34,12 +34,6 @@ theme: minima
 plugins:
   - jekyll-feed
   
-# collections que criei - testes:
-
-collections:
-  dinastia:
-    output: true
-    permalink: /dinastia/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
