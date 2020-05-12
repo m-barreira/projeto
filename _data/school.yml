@@ -2,7 +2,22 @@ docs_list_title: Portfolio
 docs:
 
 - title: Pós-graduação em Digital Experience Design
+  location: Faculdade de Belas Artes da Universidade de Lisboa
+  link: http://www.belasartes.ulisboa.pt/
+  date: (2019/2020)
+  description: Pós-graduação a frequentar atualmente, com foco em design digital e os seus vários componentes.
+  image: assets/images/saving-nemo@2x.png
   
 - title: Programa Erasmus+
+  location: Accademia di Belle Arti “Pietro Vannucci” di Perugia
+  link: https://www.abaperugia.com/
+  date: (2018/2019)
+  description: Experiência de 6 meses onde tive a oportunidade de desenvolver um projeto de identidade para uma região italiana.
+  image: assets/images/saving-nemo@2x.png
   
 - title: Licenciatura em Design de Comunicação
+  location: Faculdade de Belas Artes da Universidade de Lisboa
+  link: http://www.belasartes.ulisboa.pt/
+  date: (2016/2019)
+  description: Licenciatura com destaque no design editorial, na importância da pesquisa e do desenvolvimento de um conceito.
+  image: assets/images/saving-nemo@2x.png

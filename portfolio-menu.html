@@ -4,14 +4,10 @@ layout: page
 ---
 
 <div>
-	<ul>
-		{% for project in site.data.portfolio.docs %}
-		<li>
-			<a href="{{project.link}}">{{project.title}}</a>
-			<img src="{{project.image}}">
-			<p>{{project.date}}</p>
-			<p>{{project.description }}</p>
-		</li>
-		{% endfor %}
-	</ul>
+	{% for project in site.data.portfolio.docs %}
+		<a href="{{project.link}}"><strong>{{project.title}}</strong></a>
+		<img src="{{project.image}}">
+		<p><i>{{project.date}}</i></p>
+		<p>{{project.description | markdownify }}</p>
+	{% endfor %}
 </div>

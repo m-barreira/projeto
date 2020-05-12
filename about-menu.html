@@ -3,4 +3,18 @@ title: Sobre
 layout: page
 ---
 
-<hi>bla bla bla</hi>
+<div>
+	<img src="assets/images/maria-02-min.png">
+</div>
+
+<p>Chamo-me Maria e sou UX/UI designer e estudante na pós-graduação de <i>Digital Experience Design</i>. Estou a desenvolver e consolidar o meu interesse em <i>UX Research</i> e <i>User-Centered Design</i>, bem como a aprofundar conhecimentos em <i>UI</i> e <i>Visual Design.</i></p>
+
+
+<div>
+	<h1>Capacidades Linguísticas</h1>
+	{% for capacidade in site.data.about.docs %}
+		<a href="{{capacidade.link}}">{{capacidade.title}}</a>
+		<img src="{{capacidade.image}}">
+		<p>{{capacidade.description | markdownify }}</p>
+	{% endfor %}
+</div>

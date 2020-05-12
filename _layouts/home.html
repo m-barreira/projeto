@@ -2,14 +2,19 @@
 layout: default
 ---
 
-<p>Projeto em construção. É favor aguardar.</p>
+<h2><i>Projeto em construção. É favor aguardar.</i></h2>
 
 <div>
 	<strong>Novidades:</strong>
-	<p>Navegação final. Conteúdo da página <strong>Portfolio</strong>.</p>
+	<p>Conteúdo de todas as páginas (faltam atualizar algumas imagens).</p>
 </div>
 
 <div>
+	<img src="assets/images/saving-nemo@2x.png">
+</div>
+
+<nav>
+	<h1>Projetos em destaque</h1>
 	<ul>
 		{% for project in site.data.portfolio.docs %}
 		<li>
@@ -18,4 +23,4 @@ layout: default
 		</li>
 		{% endfor %}
 	</ul>
-</div>
+</nav>
