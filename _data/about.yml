@@ -1,16 +1,20 @@
 docs_list_title: About
 docs:
 
-#capacidades linguisticas
-
 - title: Português
   description: Língua materna
-  image: assets/images/saving-nemo@2x.png
+  image: assets/images/portugal-emoji@2x.png
+  alt: Emoji da bandeira portuguesa
+  imgtitle: Bandeira portuguesa
   
 - title: Inglês
   description: Nível B2 - *Cambridge School*
-  image: assets/images/saving-nemo@2x.png
+  image: assets/images/uk-emoji@2x.png
+  alt: Emoji da bandeira inglesa
+  imgtitle: Bandeira inglesa
   
 - title: Italiano
   description: Nível C1 - *Online Linguistic Support*
-  image: assets/images/saving-nemo@2x.png
+  image: assets/images/italy-emoji@2x.png
+  alt: Emoji da bandeira italiana
+  imgtitle: Bandeira italiana

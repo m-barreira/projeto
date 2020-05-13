@@ -1,8 +1,9 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+	<data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+	<div class="wrapper">
 
+		<!--
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
@@ -25,11 +26,20 @@
         {%- include social.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
+-->
 
-  </div>
+		<section>
+			<h4>Contactos</h4>
+			{% for contacto in site.data.contacts-footer.docs %}
+			<div>
+				<a href="{{contacto.link}}" title="{{contacto.linktitle}}" target="_blank"><img alt="{{contacto.alt}}" src="{{contacto.icon}}"></a>
+				{% endfor %}
+			</div>
+		</section>
+
+		<div>
+			<p>{{- site.description | escape -}}</p>
+		</div>
+	</div>
 
 </footer>

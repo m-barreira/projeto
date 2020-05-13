@@ -3,18 +3,22 @@ title: Sobre
 layout: page
 ---
 
-<div>
-	<img src="assets/images/maria-02-min.png">
-</div>
+<section>
+	<figure>
+		<img src="assets/images/maria@2x.png" alt="Foto de Maria Carvalho Barreira" title="maria carvalho barreira">
+		<figcaption>
+			<p>Chamo-me Maria e sou UX/UI designer e estudante na pós-graduação de <em>Digital Experience Design</em>. Estou a desenvolver e consolidar o meu interesse em <em>UX Research</em> e <em>User-Centered Design</em>, bem como a aprofundar conhecimentos em <em>UI</em> e <em>Visual Design.</em></p>
+		</figcaption>
+	</figure>
+</section>
 
-<p>Chamo-me Maria e sou UX/UI designer e estudante na pós-graduação de <i>Digital Experience Design</i>. Estou a desenvolver e consolidar o meu interesse em <i>UX Research</i> e <i>User-Centered Design</i>, bem como a aprofundar conhecimentos em <i>UI</i> e <i>Visual Design.</i></p>
-
-
-<div>
-	<h1>Capacidades Linguísticas</h1>
+<section>
+	<h2>Capacidades Linguísticas</h2>
 	{% for capacidade in site.data.about.docs %}
-		<a href="{{capacidade.link}}">{{capacidade.title}}</a>
-		<img src="{{capacidade.image}}">
+	<div>
+		<img alt="{{capacidade.alt}}" title="{{capacidade.imgtitle}}" src="{{capacidade.image}}">
+		<h3>{{capacidade.title}}</h3>
 		<p>{{capacidade.description | markdownify }}</p>
-	{% endfor %}
-</div>
+		{% endfor %}
+	</div>
+</section>

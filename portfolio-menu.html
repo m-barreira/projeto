@@ -3,11 +3,17 @@ title: Portfolio
 layout: page
 ---
 
-<div>
-	{% for project in site.data.portfolio.docs %}
-		<a href="{{project.link}}"><strong>{{project.title}}</strong></a>
-		<img src="{{project.image}}">
-		<p><i>{{project.date}}</i></p>
-		<p>{{project.description | markdownify }}</p>
+<section>
+	{% for projeto in site.data.portfolio.docs %}
+	<div>
+		<h3><a target="_blank" title="{{projeto.linktitle}}" href="{{projeto.link}}">{{projeto.title}}</a></h3>
+		<figure>
+			<img alt="{{projeto.alt}}" title="{{projeto.imgtitle}}" src="{{projeto.image}}">
+			<figcaption>
+				<p><em>{{projeto.date}}</em></p>
+				<p>{{projeto.description | markdownify }}</p>
+			</figcaption>
+		</figure>
+	</div>
 	{% endfor %}
-</div>
+</section>
