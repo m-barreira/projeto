@@ -20,17 +20,10 @@ layout: default
 
 <section>
 	{% for projeto in site.data.portfolio.docs %}
-	<a target="_blank" title="{{projeto.linktitle}}" href="{{site.baseurl}}/school-menu.html">
-		<div>
+	<div>
+		<a target="_blank" title="{{projeto.linktitle}}" href="{{site.baseurl}}/school-menu.html">
 			<h3>{{projeto.title}}</h3>
-		</div>
-	</a>
+		</a>
+	</div>
 	{% endfor %}
 </section>
-
-<hr>
-
-<div>
-	<strong>Updates no projeto:</strong>
-	<p>Todo o conteúdo. Acessibilidade. Navegação na home (?).</p>
-</div>
