@@ -2,10 +2,10 @@ docs_list_title: Navigation
 docs:
 
 - title: Sobre
-  url: about-menu.html
+  url: about.html
 
 - title: Portfolio
-  url: portfolio-menu.html
+  url: portfolio.html
 
 - title: Formação
-  url: school-menu.html
+  url: school.html
