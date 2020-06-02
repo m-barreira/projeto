@@ -27,8 +27,8 @@
 		<section>
 			<h4>Contactos</h4>
 			{% for contacto in site.data.contacts-footer.docs %}
-			<div>
-				<a href="{{contacto.link}}" title="{{contacto.linktitle}}" target="_blank"><img alt="{{contacto.alt}}" src="{{contacto.icon}}"></a>
+			<div class="contacts-footer">
+				<a href="{{contacto.link}}" title="{{contacto.linktitle}}" target="_blank">{{contacto.name}}</a>
 				{% endfor %}
 			</div>
 		</section>

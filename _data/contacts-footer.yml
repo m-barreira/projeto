@@ -3,11 +3,13 @@ docs:
 
 - link: https://www.behance.net/mariabarreira
   linktitle: Behance - maria carvalho barreira
+  name: Behance
   icon: assets/images/behance-icon@2x.png
   alt: Link externo para a página de Behance
   
 - link: https://www.linkedin.com/in/maria-carvalho-barreira/
   linktitle: Linkedin - maria carvalho barreira
+  name: Linkedin
   icon: assets/images/linkedin-icon@2x.png
   alt: Link externo para a página de Linkedin
   
