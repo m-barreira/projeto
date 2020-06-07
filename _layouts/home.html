@@ -16,13 +16,15 @@ layout: default
 </nav>
 -->
 
-<h1>Olá, chamo-me <strong>maria carvalho barreira</strong>.<br>Prazer.</h1>
+<div class="main-title-home">
+	<h1>Olá, chamo-me <span>maria</span>. Prazer.</h1>
+</div>
 
 <h2>Projetos</h2>
 
-<section>
+<section class="grid-container-home">
 	{% for projeto in site.data.portfolio.docs %}
-	<div>
+	<div class="box-shadow-animation">
 		<a title="{{projeto.linktitle}}" href="{{site.baseurl}}/school.html">
 			<h3>{{projeto.title}}</h3>
 		</a>

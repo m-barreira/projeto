@@ -3,7 +3,7 @@ title: Sobre
 layout: page
 ---
 
-<section>
+<section class="about-me">
 	<figure>
 		<img src="assets/images/maria@2x.png" alt="Foto de Maria Carvalho Barreira" title="maria carvalho barreira">
 		<figcaption>
@@ -15,7 +15,7 @@ layout: page
 <section>
 	<h2>Capacidades Linguísticas</h2>
 	{% for capacidade in site.data.about.docs %}
-	<div>
+	<div class="grid-container-about box-shadow-animation about">
 		<img alt="{{capacidade.alt}}" title="{{capacidade.imgtitle}}" src="{{capacidade.image}}">
 		<h3>{{capacidade.title}}</h3>
 		<p>{{capacidade.description | markdownify }}</p>
