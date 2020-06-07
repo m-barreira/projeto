@@ -12,15 +12,15 @@ layout: page
 	</figure>
 </section>
 
-<h3>Capacidades Linguísticas</h3>
+<h2>Capacidades Linguísticas</h2>
 
 <section class="about-containers">
 	{% for capacidade in site.data.about.docs %}
-	<div class="about-containers-teste">
+	<div>
 		<h3>{{capacidade.title}}</h3>
 		<img alt="{{capacidade.alt}}" title="{{capacidade.imgtitle}}" src="{{capacidade.image}}">
 		<p>{{capacidade.description | markdownify }}</p>
-		{% endfor %}
 	</div>
+	{% endfor %}
 </section>
 
