@@ -73,6 +73,7 @@
 		background-color: $background-color;
 		text-align: left;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+		z-index: 2;
 
 		label[for="nav-trigger"] {
 			display: block;
@@ -127,12 +128,15 @@
 
 }
 
-
 .grid-container-home {
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: 1fr 1fr 1fr;
 	padding-bottom: 100px;
+
+	@include media-query($on-palm) {
+		grid-template-columns: 1fr;
+	}
 }
 
 /*box shadow*/
@@ -209,44 +213,198 @@
 	}
 }
 
-/* SOBRE
+/* SOBRE - parte de cima*/
 
-@include media-query($on-palm) {
-		width: 100%;
-	}
 
-*/
-
-.about-me {	
-	
-	img {
-		width: 200px;
-	}
-}
-
-.grid-container-about {
-	display: grid;
-	grid-gap: 8px;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	padding-bottom: 100px;
-	
-	img {
-		width: 50px;
-	}
-}
-
-.box-shadow-animation.about {
+.grid-item1 {
 	position: relative;
 	display: inline-block;
 	width: 100%;
-	height: 100%;
+	height: 200px;
 	border-radius: 8px;
 	background-color: #fff;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 	transition: all 0.3s ease-in-out;
+	grid-area: imagem;
+
+	@include media-query($on-palm) {
+		width: 100%;
+		height: 280px;
+	}
+}
+
+.grid-item1::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+
+.grid-item1:hover {
+	transform: scale(1.2, 1.2);
+}
+
+
+.grid-item2 {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	grid-area: texto;
+}
+
+.about-me {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-areas:
+		'imagem texto texto';
+	margin-bottom: 60px;
+	
+	@include media-query($on-palm) {
+		grid-template-areas:
+		'imagem'
+		'texto'	;
+	}
+}
+
+/* sobre - capacidades - METER EM GRID! */
+
+.about-containers {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	@include media-query($on-palm) {
+		grid-template-columns: 1fr;
+	}
+
+	div {
+
+		@include media-query($on-palm) {
+			padding-bottom: 20px;
+		}
+
+		img {
+			position: relative;
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 15px 0;
+		}
+
+		div {
+			margin-top: 20px;
+
+			p {
+				font-size: $small-font-size;
+			}
+
+		}
+	}
+}
+
+
+/* portoflio */
+
+.portfolio-containers {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-bottom: 40px;
+
+	@include media-query($on-palm) {
+		grid-template-columns: 1fr;
+	}
+
+	div {
+		figure {
+
+			img {
+				position: relative;
+				display: inline-block;
+				width: 100%;
+				height: 140px;
+				border-radius: 8px;
+				background-color: #fff;
+				box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+				transition: all 0.3s ease-in-out;
+
+				@include media-query($on-palm) {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			img::after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				border-radius: 8px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+				transition: opacity 0.3s ease-in-out;
+			}
+
+			img:hover {
+				transform: scale(1.2, 1.2);
+			}
+
+			figcaption {
+				margin-top: 20px;
+			}
+		}
+
+	}
+}
+
+/* school */
+
+.school-containers {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-bottom: 40px;
+
+	@include media-query($on-palm) {
+		grid-template-columns: 1fr;
+	}
+
+	div {
+
+		@include media-query($on-palm) {
+			padding-bottom: 20px;
+		}
+
+		img {
+			position: relative;
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 15px 0;
+		}
+
+		div {
+			margin-top: 20px;
+
+			p {
+				margin-top: 20px;
+				font-size: $small-font-size;
+			}
+
+		}
+	}
 }
 
 

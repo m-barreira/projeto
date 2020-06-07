@@ -3,22 +3,24 @@ title: Sobre
 layout: page
 ---
 
-<section class="about-me">
-	<figure>
-		<img src="assets/images/maria@2x.png" alt="Foto de Maria Carvalho Barreira" title="maria carvalho barreira">
-		<figcaption>
+<section>
+	<figure class="about-me">
+		<img class="grid-item1" src="assets/images/maria@2x.png" alt="Foto de Maria Carvalho Barreira" title="maria carvalho barreira">
+		<figcaption class="grid-item2">
 			<p>Chamo-me Maria e sou UX/UI designer e estudante na pós-graduação de <em>Digital Experience Design</em>. Estou a desenvolver e consolidar o meu interesse em <em>UX Research</em> e <em>User-Centered Design</em>, bem como a aprofundar conhecimentos em <em>UI</em> e <em>Visual Design.</em></p>
 		</figcaption>
 	</figure>
 </section>
 
-<section>
-	<h2>Capacidades Linguísticas</h2>
+<h3>Capacidades Linguísticas</h3>
+
+<section class="about-containers">
 	{% for capacidade in site.data.about.docs %}
-	<div class="grid-container-about box-shadow-animation about">
-		<img alt="{{capacidade.alt}}" title="{{capacidade.imgtitle}}" src="{{capacidade.image}}">
+	<div class="about-containers-teste">
 		<h3>{{capacidade.title}}</h3>
+		<img alt="{{capacidade.alt}}" title="{{capacidade.imgtitle}}" src="{{capacidade.image}}">
 		<p>{{capacidade.description | markdownify }}</p>
 		{% endfor %}
 	</div>
 </section>
+

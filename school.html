@@ -3,14 +3,16 @@ title: Formação
 layout: page
 ---
 
-<section>
+<section class="school-containers">
 	{% for escola in site.data.school.docs %}
 	<div>
-		<img alt="{{escola.alt}}" title="{{escola.imgtitle}}" src="{{escola.image}}">
 		<h3>{{escola.title}}</h3>
-		<h4><a target="_blank" title="{{escola.linktitle}}" href="{{escola.link}}">{{escola.location}}</a></h4>
-		<p><em>{{escola.date}}</em></p>
-		<p>{{escola.description}}</p>
+		<img alt="{{escola.alt}}" title="{{escola.imgtitle}}" src="{{escola.image}}">
+		<div>
+			<h4><a target="_blank" title="{{escola.linktitle}}" href="{{escola.link}}">{{escola.location}}</a></h4>
+			<p><em>{{escola.date}}</em></p>
+			<p>{{escola.description}}</p>
+		</div>
 	</div>
 	{% endfor %}
 </section>
