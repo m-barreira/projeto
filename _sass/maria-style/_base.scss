@@ -1,0 +1,134 @@
+@import "maria-style/color",
+"maria-style/type"
+;
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	@include body;
+	background-color: $yellow-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+figure {
+	margin-bottom: $spacing-unit / 2;
+}
+
+main {
+	display: block;
+}
+
+figcaption {
+	font-size: $small-font-size;
+}
+
+
+ul {
+	margin-left: $spacing-unit;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $base-font-weight;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+a {
+	color: $brand-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $yellow-color;
+	}
+}
+
+.wrapper {
+	max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+	max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $spacing-unit;
+	padding-left: $spacing-unit;
+	@extend %clearfix;
+
+}
+
+$mobile-columns: 1fr;
+
+$box-shadow-scale: scale(1.2, 1.2);
+
+@mixin containers {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-bottom: 40px;
+}
+
+@mixin box-shadow-hover {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 140px;
+	border-radius: 8px;
+	background-color: $white;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease-in-out;
+}
+
+@mixin box-shadow-hover-after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	transition: opacity 0.3s ease-in-out;
+}
+
+@mixin img-container {
+	position: relative;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 15px 0;
+}
+
+/**
+ * Clearfix - "If an element is taller than the element containing it, and it is floated, it will overflow outside of its container." "Elements after a floating element will flow around it. Use the "clearfix" hack to fix the problem" - W3schools
+ */
+%clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}

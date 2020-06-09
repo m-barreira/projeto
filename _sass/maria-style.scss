@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+$spacing-unit: 30px !default;
+
+$content-width: 800px !default;
+
+$on-palm: 600px !default;
+
+@mixin media-query($device) {
+	@media screen and (max-width: $device) {
+		@content;
+	}
+}
+
+@mixin relative-font-size($ratio) {
+	font-size: $base-font-size * $ratio;
+}
+
+@import "maria-style/base",
+"maria-style/layout",
+"maria-style/type",
+"maria-style/color"	
+;

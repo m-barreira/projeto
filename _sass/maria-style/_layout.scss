@@ -1,6 +1,3 @@
-/**
- * Site header
- */
 .site-header {
 	min-height: $spacing-unit * 1.4;
 	// Positioning context for the mobile navigation icon
@@ -53,11 +50,6 @@
 		font-weight: 600;
 		line-height: $base-line-height;
 
-		// Gaps between nav items, but not on the last one
-		&:not(:last-child) {
-			margin-right: 90px;
-		}
-
 		&:hover {
 			color: $yellow-color;
 		}
@@ -73,17 +65,7 @@
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 		z-index: 2;
 
-		label[for="nav-trigger"] {
-			display: block;
-			float: right;
-			width: 36px;
-			height: 36px;
-			z-index: 2;
-			cursor: pointer;
-		}
-
 		.trigger {
-
 			ul {
 				display: block;
 			}
@@ -117,40 +99,36 @@
 			display: block;
 			padding: 10px 10px;
 			padding-left: 0;
-
-			&:not(:last-child) {
-				margin-right: 0;
-			}
 		}
 	}
 
 }
 
 .grid-container-home {
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 1fr 1fr 1fr;
+	@include containers;
 	padding-bottom: 100px;
 
 	@include media-query($on-palm) {
-		grid-template-columns: 1fr;
+		grid-template-columns: $mobile-columns;
 	}
 }
 
-/*box shadow*/
-
+/*box shadow com efeito em hover */
 .box-shadow-animation {
-	position: relative;
-	display: inline-block;
-	width: 200px;
+	@include box-shadow-hover;
 	height: 60px;
-	border-radius: 8px;
-	background-color: #fff;
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease-in-out;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	&::after {
+		@include box-shadow-hover-after;
+
+	}
+
+	&:hover {
+		transform: $box-shadow-scale;
+	}
 
 	h3 {
 		margin: 0;
@@ -161,25 +139,7 @@
 	}
 }
 
-.box-shadow-animation::after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	border-radius: 8px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-	transition: opacity 0.3s ease-in-out;
-
-}
-
-.box-shadow-animation:hover {
-	transform: scale(1.2, 1.2);
-}
-
 /*titulo na home*/
-
 .main-title-home {
 	padding: 80px 0 40px;
 
@@ -191,14 +151,14 @@
 		border-radius: 8px;
 		padding: 4px;
 		background-color: red;
-		animation-name: example;
+		animation-name: maria;
 		animation-duration: 3s;
 		animation-iteration-count: infinite;
 	}
 
-	@keyframes example {
+	@keyframes maria {
 		0% {
-			background-color: #FFFFFF;
+			background-color: $yellow-background;
 		}
 
 		50% {
@@ -206,45 +166,29 @@
 		}
 
 		100% {
-			background-color: #FFFFFF;
+			background-color: $yellow-background;
 		}
 	}
 }
 
-/* SOBRE - parte de cima*/
-
-
+/* sobre - parte de cima*/
 .grid-item1 {
-	position: relative;
-	display: inline-block;
-	width: 100%;
+	@include box-shadow-hover;
 	height: 200px;
-	border-radius: 8px;
-	background-color: #fff;
-	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease-in-out;
 	grid-area: imagem;
+
+	&::after {
+		@include box-shadow-hover-after;
+	}
+
+	&:hover {
+		transform: $box-shadow-scale;
+	}
 
 	@include media-query($on-palm) {
 		width: 100%;
 		height: 280px;
 	}
-}
-
-.grid-item1::after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	border-radius: 8px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-	transition: opacity 0.3s ease-in-out;
-}
-
-.grid-item1:hover {
-	transform: scale(1.2, 1.2);
 }
 
 
@@ -270,35 +214,22 @@
 }
 
 /* sobre - capacidades */
-
 .about-containers {
-	display: grid;
-	grid-gap: 30px;
-	grid-template-columns: 1fr 1fr 1fr;
+	@include containers;
 	padding-bottom: 100px;
 
 	@include media-query($on-palm) {
-		grid-template-columns: 1fr;
+		grid-template-columns: $mobile-columns;
 	}
 
 	div {
-
-		@include media-query($on-palm) {
-			padding-bottom: 20px;
-		}
 
 		h3 {
 			margin-bottom: 0;
 		}
 
 		img {
-			position: relative;
-			display: inline-block;
-			width: 80px;
-			height: 80px;
-			margin-left: auto;
-			margin-right: auto;
-			display: block;
+			@include img-container;
 			padding: 10px 0;
 		}
 
@@ -308,55 +239,39 @@
 			margin-bottom: 0;
 		}
 
+		@include media-query($on-palm) {
+			padding-bottom: 20px;
+		}
+
 	}
 }
 
-
-/* portoflio */
-
+/* portofolio */
 .portfolio-containers {
-	display: grid;
-	grid-gap: 30px;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding-bottom: 40px;
+	@include containers;
 
 	@include media-query($on-palm) {
-		grid-template-columns: 1fr;
+		grid-template-columns: $mobile-columns;
 	}
 
 	div {
 		figure {
 
 			img {
-				position: relative;
-				display: inline-block;
-				width: 100%;
-				height: 140px;
-				border-radius: 8px;
-				background-color: #fff;
-				box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-				transition: all 0.3s ease-in-out;
+				@include box-shadow-hover;
+
+				&::after {
+					@include box-shadow-hover-after;
+				}
+
+				&:hover {
+					transform: $box-shadow-scale;
+				}
 
 				@include media-query($on-palm) {
 					width: 100%;
 					height: 100%;
 				}
-			}
-
-			img::after {
-				content: '';
-				position: absolute;
-				z-index: -1;
-				width: 100%;
-				height: 100%;
-				opacity: 0;
-				border-radius: 8px;
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-				transition: opacity 0.3s ease-in-out;
-			}
-
-			img:hover {
-				transform: scale(1.2, 1.2);
 			}
 
 			figcaption {
@@ -368,32 +283,17 @@
 }
 
 /* school */
-
 .school-containers {
-	display: grid;
-	grid-gap: 30px;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding-bottom: 40px;
+	@include containers;
 
 	@include media-query($on-palm) {
-		grid-template-columns: 1fr;
+		grid-template-columns: $mobile-columns;
 	}
 
 	div {
 
-		@include media-query($on-palm) {
-			padding-bottom: 20px;
-		}
-
 		img {
-			position: relative;
-			display: inline-block;
-			width: 80px;
-			height: 80px;
-			margin-left: auto;
-			margin-right: auto;
-			display: block;
-			padding: 15px 0;
+			@include img-container;
 		}
 
 		div {
@@ -405,20 +305,21 @@
 			}
 
 		}
+
+		@include media-query($on-palm) {
+			padding-bottom: 20px;
+		}
+
 	}
 }
 
-
-/**
- * Site footer - FEITO
- */
+/* footer */
 .site-footer {
 	padding: $spacing-unit 0;
 	bottom: 0;
 }
 
 .contacts-footer {
-
 	display: flex;
 	font-weight: 600;
 
@@ -440,10 +341,7 @@ footer {
 	}
 }
 
-
-/**
- * Page content
- */
+/* content */
 .page-content {
 	padding: $spacing-unit 0;
 	flex: 1;
